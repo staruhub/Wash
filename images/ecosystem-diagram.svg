@@ -1,0 +1,128 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: sans-serif; font-size: 18px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-family: sans-serif; font-size: 14px; text-anchor: middle; opacity: 0.7; }
+    .platform-text { font-family: sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; fill: white; }
+    .node-text { font-family: sans-serif; font-size: 12px; text-anchor: middle; }
+    .small-text { font-family: sans-serif; font-size: 10px; text-anchor: middle; fill: #4b5563; }
+  </style>
+  
+  <rect width="100%" height="100%" fill="white" />
+  
+  <!-- Title -->
+  <text x="400" y="30" class="title">AI驱动的个人洗护产品生态系统</text>
+  <text x="400" y="50" class="subtitle">数据流与价值创造网络</text>
+  
+  <!-- Background layers -->
+  <ellipse cx="400" cy="230" rx="360" ry="190" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1" />
+  <ellipse cx="400" cy="230" rx="260" ry="140" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" />
+  
+  <!-- Core Platform -->
+  <circle cx="400" cy="230" r="80" fill="#2563eb" />
+  <text x="400" y="222" class="platform-text">AI洗护</text>
+  <text x="400" y="242" class="platform-text">智能平台</text>
+  
+  <!-- Connected Devices -->
+  <g>
+    <!-- Electric Toothbrush -->
+    <circle cx="220" cy="180" r="40" fill="#60a5fa" />
+    <text x="220" y="185" class="node-text" fill="white">电动牙刷</text>
+    <line x1="270" y1="180" x2="340" y2="200" stroke="#93c5fd" stroke-width="2" />
+    <text x="290" y="175" class="small-text">口腔数据</text>
+  </g>
+  
+  <g>
+    <!-- Razor -->
+    <circle cx="260" cy="340" r="40" fill="#60a5fa" />
+    <text x="260" y="345" class="node-text" fill="white">剃须刀</text>
+    <line x1="300" y1="325" x2="350" y2="280" stroke="#93c5fd" stroke-width="2" />
+    <text x="320" y="315" class="small-text">剃须效果</text>
+  </g>
+  
+  <g>
+    <!-- Hair Clipper -->
+    <circle cx="580" cy="180" r="40" fill="#60a5fa" />
+    <text x="580" y="185" class="node-text" fill="white">修毛器</text>
+    <line x1="540" y1="180" x2="460" y2="200" stroke="#93c5fd" stroke-width="2" />
+    <text x="500" y="175" class="small-text">修剪数据</text>
+  </g>
+  
+  <g>
+    <!-- Water Flosser -->
+    <circle cx="540" cy="340" r="40" fill="#60a5fa" />
+    <text x="540" y="345" class="node-text" fill="white">洁牙器</text>
+    <line x1="500" y1="325" x2="450" y2="280" stroke="#93c5fd" stroke-width="2" />
+    <text x="480" y="315" class="small-text">冲洗压力</text>
+  </g>
+  
+  <!-- External Ecosystem -->
+  <g>
+    <!-- OEM/ODM -->
+    <rect x="140" cy="50" width="120" height="60" rx="10" fill="#1e40af" />
+    <text x="200" y="85" class="node-text" fill="white">OEM/ODM厂商</text>
+    <path d="M200,110 L220,160" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,3" />
+    <path d="M200,110 L260,150" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="215" y="135" class="small-text">硬件支持</text>
+  </g>
+  
+  <g>
+    <!-- Brands -->
+    <rect x="540" cy="50" width="120" height="60" rx="10" fill="#1e40af" />
+    <text x="600" y="85" class="node-text" fill="white">品牌与消费者</text>
+    <path d="M600,110 L580,150" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,3" />
+    <path d="M600,110 L540,160" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="595" y="135" class="small-text">市场需求</text>
+  </g>
+  
+  <g>
+    <!-- Health Services -->
+    <rect x="400" cy="400" width="120" height="60" rx="10" fill="#1e40af" />
+    <text x="460" y="435" class="node-text" fill="white">健康服务生态</text>
+    <path d="M460,400 L450,360" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="441" y="380" class="small-text">健康建议</text>
+  </g>
+  
+  <g>
+    <!-- App Store -->
+    <rect x="130" cy="350" width="120" height="60" rx="10" fill="#1e40af" />
+    <text x="190" y="385" class="node-text" fill="white">应用商店与服务</text>
+    <path d="M190,350 L260,300" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,3" />
+    <text x="215" y="335" class="small-text">内容分发</text>
+  </g>
+  
+  <!-- Data Circles -->
+  <circle cx="320" cy="150" r="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="1" />
+  <text x="320" y="155" class="small-text">使用数据</text>
+  
+  <circle cx="400" cy="130" r="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="1" />
+  <text x="400" y="135" class="small-text">AI分析</text>
+  
+  <circle cx="480" cy="150" r="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="1" />
+  <text x="480" y="155" class="small-text">个性化推荐</text>
+  
+  <circle cx="350" cy="330" r="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="1" />
+  <text x="350" y="335" class="small-text">维护预测</text>
+  
+  <circle cx="450" cy="330" r="25" fill="#dbeafe" stroke="#60a5fa" stroke-width="1" />
+  <text x="450" y="335" class="small-text">健康监测</text>
+  
+  <!-- Connection lines between data circles and platform -->
+  <line x1="320" y1="175" x2="360" y2="190" stroke="#93c5fd" stroke-width="2" />
+  <line x1="400" y1="155" x2="400" y2="180" stroke="#93c5fd" stroke-width="2" />
+  <line x1="480" y1="175" x2="440" y2="190" stroke="#93c5fd" stroke-width="2" />
+  <line x1="350" y1="305" x2="380" y2="280" stroke="#93c5fd" stroke-width="2" />
+  <line x1="450" y1="305" x2="420" y2="280" stroke="#93c5fd" stroke-width="2" />
+  
+  <!-- Legend -->
+  <rect x="650" y="450" width="15" height="15" rx="2" fill="#2563eb" />
+  <text x="705" y="463" class="small-text" text-anchor="start">核心平台</text>
+  
+  <circle cx="658" cy="430" r="7.5" fill="#60a5fa" />
+  <text x="705" y="433" class="small-text" text-anchor="start">智能设备</text>
+  
+  <rect x="650" y="410" width="15" height="15" rx="2" fill="#1e40af" />
+  <text x="705" y="423" class="small-text" text-anchor="start">生态伙伴</text>
+  
+  <circle cx="658" cy="390" r="7.5" fill="#dbeafe" stroke="#60a5fa" stroke-width="1" />
+  <text x="705" y="393" class="small-text" text-anchor="start">数据服务</text>
+</svg>

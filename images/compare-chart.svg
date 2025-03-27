@@ -1,0 +1,112 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title {
+      font-family: sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .label {
+      font-family: sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+    }
+    .axis-label {
+      font-family: sans-serif;
+      font-size: 10px;
+      text-anchor: start;
+    }
+    .legend-text {
+      font-family: sans-serif;
+      font-size: 11px;
+    }
+  </style>
+  
+  <rect width="100%" height="100%" fill="white" />
+  <text x="400" y="30" class="title">AI驱动个人洗护产品平台机会方向对比</text>
+  
+  <!-- Chart background -->
+  <rect x="100" y="60" width="600" height="280" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" />
+  
+  <!-- Horizontal grid lines -->
+  <line x1="100" y1="116" x2="700" y2="116" stroke="#e5e7eb" stroke-width="1" />
+  <line x1="100" y1="172" x2="700" y2="172" stroke="#e5e7eb" stroke-width="1" />
+  <line x1="100" y1="228" x2="700" y2="228" stroke="#e5e7eb" stroke-width="1" />
+  <line x1="100" y1="284" x2="700" y2="284" stroke="#e5e7eb" stroke-width="1" />
+  
+  <!-- Vertical axis labels -->
+  <text x="95" y="172" class="axis-label" text-anchor="end" alignment-baseline="middle">资源投入</text>
+  <text x="95" y="228" class="axis-label" text-anchor="end" alignment-baseline="middle">技术复杂度</text>
+  <text x="95" y="284" class="axis-label" text-anchor="end" alignment-baseline="middle">实施时间</text>
+  <text x="95" y="116" class="axis-label" text-anchor="end" alignment-baseline="middle">市场潜力</text>
+  <text x="95" y="60" class="axis-label" text-anchor="end" alignment-baseline="middle">指标</text>
+  
+  <!-- Horizontal axis labels -->
+  <text x="200" y="310" class="axis-label" text-anchor="middle">个性化护理推荐</text>
+  <text x="320" y="310" class="axis-label" text-anchor="middle">产品改进反馈</text>
+  <text x="440" y="310" class="axis-label" text-anchor="middle">设备预测维护</text>
+  <text x="560" y="310" class="axis-label" text-anchor="middle">健康监测顾问</text>
+  <text x="680" y="310" class="axis-label" text-anchor="middle">多设备生态系统</text>
+  
+  <!-- Market potential -->
+  <rect x="150" y="75" width="100" height="41" fill="#3b82f6" opacity="0.9" />
+  <rect x="270" y="89" width="100" height="27" fill="#3b82f6" opacity="0.75" />
+  <rect x="390" y="89" width="100" height="27" fill="#3b82f6" opacity="0.75" />
+  <rect x="510" y="82" width="100" height="34" fill="#3b82f6" opacity="0.8" />
+  <rect x="630" y="75" width="100" height="41" fill="#3b82f6" opacity="0.85" />
+  
+  <!-- Resource Investment -->
+  <rect x="150" y="131" width="100" height="41" fill="#60a5fa" opacity="0.6" />
+  <rect x="270" y="145" width="100" height="27" fill="#60a5fa" opacity="0.5" />
+  <rect x="390" y="138" width="100" height="34" fill="#60a5fa" opacity="0.55" />
+  <rect x="510" y="124" width="100" height="48" fill="#60a5fa" opacity="0.75" />
+  <rect x="630" y="124" width="100" height="48" fill="#60a5fa" opacity="0.75" />
+  
+  <!-- Technical complexity -->
+  <rect x="150" y="187" width="100" height="41" fill="#93c5fd" opacity="0.6" />
+  <rect x="270" y="208" width="100" height="20" fill="#93c5fd" opacity="0.4" />
+  <rect x="390" y="194" width="100" height="34" fill="#93c5fd" opacity="0.6" />
+  <rect x="510" y="173" width="100" height="55" fill="#93c5fd" opacity="0.9" />
+  <rect x="630" y="173" width="100" height="55" fill="#93c5fd" opacity="0.8" />
+  
+  <!-- Implementation time -->
+  <rect x="150" y="243" width="100" height="41" fill="#bfdbfe" opacity="0.5" />
+  <rect x="270" y="257" width="100" height="27" fill="#bfdbfe" opacity="0.4" />
+  <rect x="390" y="243" width="100" height="41" fill="#bfdbfe" opacity="0.6" />
+  <rect x="510" y="236" width="100" height="48" fill="#bfdbfe" opacity="0.85" />
+  <rect x="630" y="229" width="100" height="55" fill="#bfdbfe" opacity="0.9" />
+  
+  <!-- Legend -->
+  <rect x="570" y="25" width="12" height="12" fill="#3b82f6" opacity="0.9" />
+  <text x="588" y="35" class="legend-text">高值 = 好</text>
+  <rect x="650" y="25" width="12" height="12" fill="#bfdbfe" opacity="0.9" />
+  <text x="668" y="35" class="legend-text">高值 = 挑战</text>
+  
+  <!-- Value indicators -->
+  <text x="200" y="100" class="label" fill="white">★★★★★</text>
+  <text x="320" y="100" class="label" fill="white">★★★★☆</text>
+  <text x="440" y="100" class="label" fill="white">★★★★☆</text>
+  <text x="560" y="100" class="label" fill="white">★★★★☆</text>
+  <text x="680" y="100" class="label" fill="white">★★★★★</text>
+  
+  <text x="200" y="156" class="label" fill="white">中等</text>
+  <text x="320" y="156" class="label" fill="white">低</text>
+  <text x="440" y="156" class="label" fill="white">中低</text>
+  <text x="560" y="156" class="label" fill="white">高</text>
+  <text x="680" y="156" class="label" fill="white">高</text>
+  
+  <text x="200" y="212" class="label" fill="white">中等</text>
+  <text x="320" y="216" class="label" fill="white">低</text>
+  <text x="440" y="212" class="label" fill="white">中等</text>
+  <text x="560" y="205" class="label" fill="white">很高</text>
+  <text x="680" y="205" class="label" fill="white">高</text>
+  
+  <text x="200" y="268" class="label" fill="white">短期</text>
+  <text x="320" y="268" class="label" fill="white">短期</text>
+  <text x="440" y="268" class="label" fill="white">中期</text>
+  <text x="560" y="264" class="label" fill="white">长期</text>
+  <text x="680" y="264" class="label" fill="white">长期</text>
+  
+  <!-- Bottom note -->
+  <text x="400" y="340" class="axis-label" text-anchor="middle" font-style="italic">基于市场潜力、资源需求、技术难度和实施时间的综合评估</text>
+</svg>

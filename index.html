@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI驱动的个人洗护产品OEM/ODM平台战略分析与实施建议">
+    <meta name="keywords" content="AI, 洗护产品, OEM, ODM, 战略分析">
+    <title>AI驱动个人洗护产品OEM/ODM平台战略</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="modern-styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-transparent">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="text-xl font-bold tracking-tight z-10">
+                    <a href="#" class="text-white transition duration-300">
+                        AI洗护平台战略
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#market" class="text-white hover:text-blue-200 transition duration-300">市场分析</a>
+                    <a href="#opportunities" class="text-white hover:text-blue-200 transition duration-300">机会方向</a>
+                    <a href="#strategy" class="text-white hover:text-blue-200 transition duration-300">战略建议</a>
+                    <a href="#implementation" class="text-white hover:text-blue-200 transition duration-300">实施路径</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none z-10">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="h-full flex flex-col pt-20 px-6">
+            <button id="closeMenuBtn" class="absolute top-6 right-6 text-white">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+            <div class="flex flex-col space-y-6">
+                <a href="#market" class="text-2xl text-white hover:text-blue-300 transition duration-300 mobile-menu-link">市场分析</a>
+                <a href="#opportunities" class="text-2xl text-white hover:text-blue-300 transition duration-300 mobile-menu-link">机会方向</a>
+                <a href="#strategy" class="text-2xl text-white hover:text-blue-300 transition duration-300 mobile-menu-link">战略建议</a>
+                <a href="#implementation" class="text-2xl text-white hover:text-blue-300 transition duration-300 mobile-menu-link">实施路径</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern">
+            <canvas id="animationCanvas" class="animation-canvas"></canvas>
+        </div>
+        <div class="container mx-auto">
+            <div class="hero-content flex flex-col items-start justify-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate-fadeIn" style="color: #FFFFFF;">
+                    AI驱动的个人洗护产品
+                    <br class="hidden md:block">
+                    <span class="text-blue-200">OEM/ODM增值平台战略</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-2xl mb-10 animate-fadeIn animation-delay-200">
+                    研究如何在个人洗护产品（剃须刀/修毛器/洁牙器）领域，结合OEM/ODM产业优势和人工智能技术，打造高价值的AI平台产品
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fadeIn animation-delay-400">
+                    <a href="#market" class="btn btn-primary px-6 py-3 rounded-lg flex items-center gap-2">
+                        <span>浏览完整报告</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <button id="showExecutiveSummary" class="btn btn-secondary px-6 py-3 rounded-lg flex items-center gap-2 text-white border border-white">
+                        <i class="ri-file-text-line"></i>
+                        <span>管理摘要</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- Executive Summary Modal -->
+    <div id="executiveSummaryModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto mx-4">
+            <div class="flex justify-between items-center border-b p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">管理摘要</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <p class="mb-4 text-gray-700">个人护理电器市场预计到2030年将达到321亿美元，CAGR为4.7%，存在巨大的AI创新空间。</p>
+                <div class="bg-blue-50 p-5 rounded-lg mb-6">
+                    <h4 class="font-semibold mb-3 text-primary">五大AI平台发展方向</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2">
+                            <i class="ri-check-line text-primary mt-1"></i>
+                            <span>个性化护理方案推荐平台</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ri-check-line text-primary mt-1"></i>
+                            <span>基于用户数据的产品改进反馈系统</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ri-check-line text-primary mt-1"></i>
+                            <span>智能设备管理与维护预测平台</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ri-check-line text-primary mt-1"></i>
+                            <span>AI驱动的健康监测与护理智能顾问</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ri-check-line text-primary mt-1"></i>
+                            <span>多设备互联的智能个人护理生态系统</span>
+                        </li>
+                    </ul>
+                </div>
+                <h4 class="font-semibold mb-3 text-primary">战略建议</h4>
+                <p class="mb-3 text-gray-700">建议优先发展<strong>个性化护理方案推荐平台</strong>，从单一产品类别切入，利用OEM/ODM资源优势快速推广。通过分阶段扩展，最终形成完整的AI驱动个人护理生态系统。</p>
+                <p class="text-gray-700">商业模式应包含软件授权、数据分析服务和消费者订阅，形成可持续的收入来源。</p>
+            </div>
+            <div class="flex justify-end p-6 border-t">
+                <button id="downloadSummary" class="btn btn-secondary flex items-center gap-2">
+                    <i class="ri-download-line"></i>
+                    <span>下载摘要</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Analysis Section -->
+    <section id="market" class="section bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto mb-16 text-center">
+                <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-primary bg-blue-100 rounded-full">市场分析</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">个人洗护产品市场现状与趋势</h2>
+                <p class="text-gray-600 text-lg">了解市场规模、增长趋势及主要参与者，洞察AI技术在个人洗护领域的应用潜力</p>
+            </div>
+
+            <!-- Market Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="stat-card hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 text-primary">
+                        <i class="ri-line-chart-line text-2xl"></i>
+                        <h3 class="text-xl font-semibold">市场规模</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg transition-all duration-300 hover:shadow-md">
+                            <p class="stat-value">$321亿</p>
+                            <p class="stat-label">2030年预计市场规模</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg transition-all duration-300 hover:shadow-md">
+                            <p class="stat-value">4.7%</p>
+                            <p class="stat-label">年复合增长率(CAGR)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 my-4">个人护理电器市场预计从2023年的222亿美元增长到2030年的321亿美元，保持稳定增长。</p>
+                    
+                    <!-- Interactive Chart  -->
+                    <div class="bg-white rounded-lg p-1 mt-4 border border-gray-100">
+                        <div class="h-64 relative">
+                            <!-- SVG Chart -->
+                            <svg class="w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Grid lines -->
+                                <line x1="40" y1="20" x2="40" y2="180" stroke="#e5e7eb" />
+                                <line x1="40" y1="180" x2="380" y2="180" stroke="#e5e7eb" />
+                                
+                                <!-- Y axis text -->
+                                <text x="10" y="30" font-size="10" text-anchor="start" fill="#6b7280">$350亿</text>
+                                <text x="10" y="80" font-size="10" text-anchor="start" fill="#6b7280">$300亿</text>
+                                <text x="10" y="130" font-size="10" text-anchor="start" fill="#6b7280">$250亿</text>
+                                <text x="10" y="180" font-size="10" text-anchor="start" fill="#6b7280">$200亿</text>
+                                
+                                <!-- X axis text -->
+                                <text x="40" y="195" font-size="10" text-anchor="middle" fill="#6b7280">2023</text>
+                                <text x="100" y="195" font-size="10" text-anchor="middle" fill="#6b7280">2024</text>
+                                <text x="160" y="195" font-size="10" text-anchor="middle" fill="#6b7280">2025</text>
+                                <text x="220" y="195" font-size="10" text-anchor="middle" fill="#6b7280">2026</text>
+                                <text x="280" y="195" font-size="10" text-anchor="middle" fill="#6b7280">2027</text>
+                                <text x="340" y="195" font-size="10" text-anchor="middle" fill="#6b7280">2030</text>
+                                
+                                <!-- Chart line -->
+                                <path d="M40,180 Q100,170 160,160 T280,130 T380,70" fill="none" stroke="#3b82f6" stroke-width="3" />
+                                
+                                <!-- Gradient fill under the line -->
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5" />
+                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1" />
+                                </linearGradient>
+                                <path d="M40,180 Q100,170 160,160 T280,130 T380,70 V180 H40Z" fill="url(#gradient)" />
+                                
+                                <!-- Data points -->
+                                <circle cx="40" cy="180" r="4" fill="#3b82f6" />
+                                <circle cx="100" cy="170" r="4" fill="#3b82f6" />
+                                <circle cx="160" cy="160" r="4" fill="#3b82f6" />
+                                <circle cx="220" cy="145" r="4" fill="#3b82f6" />
+                                <circle cx="280" cy="130" r="4" fill="#3b82f6" />
+                                <circle cx="380" cy="70" r="4" fill="#3b82f6" />
+                            </svg>
+                            <div class="absolute bottom-0 right-0 bg-gray-50 px-2 py-1 text-xs text-gray-600 rounded">
+                                个人护理电器市场规模增长趋势 (2023-2030)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-4 text-primary">
+                        <i class="ri-arrow-right-circle-line text-2xl"></i>
+                        <h3 class="text-xl font-semibold">核心趋势</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4 group transition duration-300 hover:translate-x-2">
+                            <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1 group-hover:bg-primary group-hover:text-white transition duration-300">
+                                <i class="ri-user-settings-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">个性化需求增长</h4>
+                                <p class="text-gray-600 text-sm">消费者越来越期待基于个人特征的定制化产品和解决方案，AI技术能够有效满足这一需求</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 group transition duration-300 hover:translate-x-2">
+                            <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1 group-hover:bg-primary group-hover:text-white transition duration-300">
+                                <i class="ri-device-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">智能互联设备普及</h4>
+                                <p class="text-gray-600 text-sm">通过手机APP连接的智能洗护产品快速增长，尤其是中高端市场，为AI算法提供了数据基础</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 group transition duration-300 hover:translate-x-2">
+                            <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1 group-hover:bg-primary group-hover:text-white transition duration-300">
+                                <i class="ri-calendar-check-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">订阅模式兴起</h4>
+                                <p class="text-gray-600 text-sm">产品与服务结合的订阅模式逐渐流行，创造持续收入，AI服务可作为高价值订阅内容</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 group transition duration-300 hover:translate-x-2">
+                            <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1 group-hover:bg-primary group-hover:text-white transition duration-300">
+                                <i class="ri-recycle-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">可持续发展</h4>
+                                <p class="text-gray-600 text-sm">环保设计和延长产品使用寿命成为消费者选择因素，AI可优化资源使用效率并延长设备寿命</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- OEM/ODM Analysis -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold mb-6">OEM/ODM市场特点</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-building-2-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">产业集群优势</h4>
+                        <p class="text-gray-600">亚太地区特别是中国形成完整的个人护理电器制造生态，制造成本优势显著，产业链协同效率高</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-code-box-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">技术整合能力</h4>
+                        <p class="text-gray-600">OEM/ODM厂商具备将AI功能与硬件整合的能力，成本控制和规模化生产优势，可实现技术快速落地</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-global-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">品牌客户网络</h4>
+                        <p class="text-gray-600">拥有广泛的国际品牌客户资源，可快速推广创新解决方案，降低市场进入门槛，加速技术采用</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg mt-8">
+                    <h4 class="font-semibold mb-4 text-primary">主要OEM/ODM厂商</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-white p-4 rounded-lg border border-gray-100 transition-all duration-300 hover:border-blue-200 hover:shadow-sm">
+                            <h5 class="font-medium text-primary border-b border-gray-100 pb-2 mb-2">剃须刀/修毛器</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Dorco USA（韩国）</li>
+                                <li>• MERS RAZOR WORKS</li>
+                                <li>• Xirui Manufacturing（中国）</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-100 transition-all duration-300 hover:border-blue-200 hover:shadow-sm">
+                            <h5 class="font-medium text-primary border-b border-gray-100 pb-2 mb-2">电动牙刷</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Relish Technology（中国）</li>
+                                <li>• Aiwejay（中国）</li>
+                                <li>• Cinoll（中国）</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-100 transition-all duration-300 hover:border-blue-200 hover:shadow-sm">
+                            <h5 class="font-medium text-primary border-b border-gray-100 pb-2 mb-2">主要品牌客户</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• 宝洁公司（吉列/欧乐-B）</li>
+                                <li>• 飞利浦</li>
+                                <li>• 松下</li>
+                                <li>• 博朗</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-100 transition-all duration-300 hover:border-blue-200 hover:shadow-sm">
+                            <h5 class="font-medium text-primary border-b border-gray-100 pb-2 mb-2">市场地位</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• 亚太地区占主导地位</li>
+                                <li>• 全球产能集中</li>
+                                <li>• 技术整合能力强</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunities Section -->
+    <section id="opportunities" class="section bg-gray-50">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto mb-16 text-center">
+                <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-primary bg-blue-100 rounded-full">机会方向</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">AI驱动的个人洗护产品平台机会</h2>
+                <p class="text-gray-600 text-lg">识别结合OEM/ODM优势的AI平台发展方向，找出最具市场潜力和实施可行性的机会</p>
+            </div>
+
+            <!-- Opportunities Comparison Chart -->
+            <div class="bg-white p-6 rounded-xl shadow-md mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-primary">机会方向对比分析</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">平台方向</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">技术难度</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">市场潜力</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">实施周期</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">OEM/ODM协同</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">个性化护理方案推荐平台</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">中等</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">很高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">短期</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">高</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">基于用户数据的产品改进反馈</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">较低</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">较高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 30%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">短期</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">很高</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">智能设备管理与维护预测</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">中等</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">较高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">中期</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">高</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">AI健康监测与护理顾问</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">较高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">长期</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">中等</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">多设备智能生态系统</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">很高</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">长期</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2.5 mr-2">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-500">高</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Platform Details Tabs -->
+            <div class="mb-12">
+                <div class="flex flex-wrap border-b mb-8" id="platformTabs">
+                    <button class="tab-button active px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="tab1">个性化护理方案</button>
+                    <button class="tab-button px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="tab2">产品改进反馈</button>
+                    <button class="tab-button px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="tab3">设备管理与预测</button>
+                    <button class="tab-button px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="tab4">健康监测与顾问</button>
+                    <button class="tab-button px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="tab5">多设备生态系统</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="tab1" class="tab-content active">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-semibold mb-4 text-primary">个性化护理方案推荐平台</h3>
+                            <p class="text-gray-700 mb-6">基于AI图像识别和数据分析，为用户提供专业级的个性化护理建议，优化使用效果和体验。这一平台将根据用户的皮肤、毛发或口腔状况，结合个人特征，制定定制化的护理方案。</p>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">关键价值</h4>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>基于皮肤/毛发/口腔特征提供定制护理方案</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>智能识别使用习惯并提供改进建议</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>通过数据积累持续优化推荐准确度</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>为OEM/ODM提供产品设计改进依据</span>
+                                </li>
+                            </ul>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">应用案例</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                    <h5 class="font-medium mb-2">欧乐-B Genius X</h5>
+                                    <p class="text-sm text-gray-600">AI辅助刷牙，识别口腔状况并提供个性化建议</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                    <h5 class="font-medium mb-2">飞利浦Smart Shaver</h5>
+                                    <p class="text-sm text-gray-600">分析胡须生长情况，推荐剃须方向和力度</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-5 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-primary">技术与市场评估</h4>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">技术难度</span>
+                                    <span class="text-sm text-gray-500">中等</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">市场潜力</span>
+                                    <span class="text-sm text-gray-500">很高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">实施周期</span>
+                                    <span class="text-sm text-gray-500">短期</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">OEM/ODM协同</span>
+                                    <span class="text-sm text-gray-500">高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2 text-blue-800">关键成功因素</h5>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>高精度图像识别与分析算法</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>大规模用户数据积累</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>设备传感器的整合设计</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>直观友好的用户界面</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab2" class="tab-content hidden">
+                    <!-- Content for 产品改进反馈 tab -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-semibold mb-4 text-primary">基于用户数据的产品改进反馈系统</h3>
+                            <p class="text-gray-700 mb-6">构建AI驱动的用户体验分析平台，为品牌和制造商提供数据洞察，指导产品设计和改进。通过收集和分析真实用户使用数据，优化产品性能和用户体验。</p>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">关键价值</h4>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>大规模真实用户行为数据收集与分析</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>识别产品设计缺陷和改进机会</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>缩短产品迭代周期，降低研发风险</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>指导生产工艺优化和质量管控</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="bg-primary/5 p-5 rounded-lg mb-6">
+                                <h4 class="font-semibold mb-3 text-primary">数据价值模型</h4>
+                                <p class="text-sm text-gray-700 mb-4">平台通过分析用户数据产生多层次价值：</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                                        <h5 class="font-medium text-primary text-sm mb-1">产品设计价值</h5>
+                                        <p class="text-xs text-gray-600">指导下一代产品设计方向，优化功能和体验</p>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                                        <h5 class="font-medium text-primary text-sm mb-1">服务提升价值</h5>
+                                        <p class="text-xs text-gray-600">识别用户痛点，优化客户支持和服务流程</p>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg shadow-sm">
+                                        <h5 class="font-medium text-primary text-sm mb-1">战略决策价值</h5>
+                                        <p class="text-xs text-gray-600">提供市场洞察，支持品牌战略和产品线规划</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-5 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-primary">技术与市场评估</h4>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">技术难度</span>
+                                    <span class="text-sm text-gray-500">较低</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">市场潜力</span>
+                                    <span class="text-sm text-gray-500">较高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">实施周期</span>
+                                    <span class="text-sm text-gray-500">短期</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">OEM/ODM协同</span>
+                                    <span class="text-sm text-gray-500">很高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2 text-blue-800">关键成功因素</h5>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>数据隐私与安全机制</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>大数据处理能力</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>与OEM/ODM工艺流程整合</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>数据可视化展示能力</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab3" class="tab-content hidden">
+                    <!-- 智能设备管理与维护预测 content -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-semibold mb-4 text-primary">智能设备管理与维护预测平台</h3>
+                            <p class="text-gray-700 mb-6">利用AI算法监测设备使用状况，预测维护需求，延长产品生命周期，减少浪费并提高用户满意度。平台可实时监控设备性能，提前预警潜在问题，并推荐最佳维护时间和方式。</p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h4 class="font-medium text-primary mb-2">预测性维护</h4>
+                                    <p class="text-sm text-gray-600">分析设备运行数据，预测潜在故障并提前提醒用户更换部件或进行保养</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h4 class="font-medium text-primary mb-2">资源优化</h4>
+                                    <p class="text-sm text-gray-600">优化电池使用和充电模式，延长电池寿命；跟踪耗材使用情况，实现按需更换</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h4 class="font-medium text-primary mb-2">使用指导</h4>
+                                    <p class="text-sm text-gray-600">识别不当使用模式，提供个性化使用指导，确保设备发挥最佳性能</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h4 class="font-medium text-primary mb-2">环保价值</h4>
+                                    <p class="text-sm text-gray-600">延长产品寿命，减少电子废弃物，符合可持续发展理念和ESG标准</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">应用场景</h4>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0">
+                                        <i class="ri-brush-line text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">电动牙刷</h5>
+                                        <p class="text-sm text-gray-600">监测刷头磨损程度、电池健康状况，提醒更换刷头和合理充电</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0">
+                                        <i class="ri-scissors-line text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium">电动剃须刀</h5>
+                                        <p class="text-sm text-gray-600">监测刀头锋利度，刀网磨损，提醒用户更换部件或进行清洁维护</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-5 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-primary">技术与市场评估</h4>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">技术难度</span>
+                                    <span class="text-sm text-gray-500">中等</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">市场潜力</span>
+                                    <span class="text-sm text-gray-500">较高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">实施周期</span>
+                                    <span class="text-sm text-gray-500">中期</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">OEM/ODM协同</span>
+                                    <span class="text-sm text-gray-500">高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 border border-blue-200 rounded-lg">
+                                <h5 class="font-medium mb-3 text-primary">商业模式潜力</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>品牌授权模式</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>消费者订阅服务</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>耗材智能补充系统</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>延保服务增值</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab4" class="tab-content hidden">
+                    <!-- 健康监测与顾问 content -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-semibold mb-4 text-primary">AI驱动的健康监测与护理智能顾问</h3>
+                            <p class="text-gray-700 mb-6">将个人洗护产品转变为健康监测工具，通过AI分析用户的皮肤、口腔或毛发状况，提供实时健康分析和护理建议。此平台整合专业知识库，结合用户数据，为用户提供个性化健康管理方案。</p>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">关键价值</h4>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>通过日常洗护活动持续监测健康状况</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>早期发现潜在健康问题的征兆</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>提供专业级健康护理建议和预防措施</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>通过历史数据分析趋势，实现健康预测</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>与专业健康服务提供商合作，扩展服务价值</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                                <h4 class="font-semibold mb-4 text-primary">健康监测应用案例</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <div class="bg-blue-100 p-2 rounded-full text-primary">
+                                                <i class="ri-brush-line text-lg"></i>
+                                            </div>
+                                            <h5 class="font-medium">智能牙刷口腔健康分析</h5>
+                                        </div>
+                                        <p class="text-sm text-gray-600">通过智能牙刷检测口腔健康状况，识别牙龈出血、牙菌斑积累等问题，提供针对性的口腔护理建议，并在必要时推荐专业牙科咨询</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <div class="bg-blue-100 p-2 rounded-full text-primary">
+                                                <i class="ri-scissors-line text-lg"></i>
+                                            </div>
+                                            <h5 class="font-medium">智能剃须刀皮肤状况监测</h5>
+                                        </div>
+                                        <p class="text-sm text-gray-600">通过内置摄像头和传感器分析面部皮肤状况，识别敏感区域、痘痘、干燥或刮伤，提供个性化的剃须指导和皮肤护理建议</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">智能顾问优势</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h5 class="font-medium text-primary mb-2">专业知识库</h5>
+                                    <p class="text-sm text-gray-600">整合皮肤学、口腔医学、健康管理等领域的专业知识，提供权威护理建议</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h5 class="font-medium text-primary mb-2">个性化分析</h5>
+                                    <p class="text-sm text-gray-600">基于用户历史数据和当前状态，提供高度个性化的健康分析和护理方案</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h5 class="font-medium text-primary mb-2">持续学习进化</h5>
+                                    <p class="text-sm text-gray-600">AI系统通过用户反馈不断学习改进，提高建议的准确性和相关性</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                    <h5 class="font-medium text-primary mb-2">专业服务对接</h5>
+                                    <p class="text-sm text-gray-600">在检测到需要专业干预的情况时，可以推荐并对接相关医疗或护理服务</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-5 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-primary">技术与市场评估</h4>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">技术难度</span>
+                                    <span class="text-sm text-gray-500">较高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">市场潜力</span>
+                                    <span class="text-sm text-gray-500">高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">实施周期</span>
+                                    <span class="text-sm text-gray-500">长期</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">OEM/ODM协同</span>
+                                    <span class="text-sm text-gray-500">中等</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h5 class="font-semibold mb-2 text-blue-800">技术实现挑战</h5>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>高精度健康状况识别算法</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>医疗级数据安全与隐私保护</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>专业知识整合与验证</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>硬件传感器精度提升</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-6 p-4 border border-blue-200 rounded-lg">
+                                <h5 class="font-medium mb-3 text-primary">市场合作潜力</h5>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>医疗健康服务提供商</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>保险公司健康管理计划</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>专业护理品牌联合推广</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="ri-check-line text-primary"></i>
+                                        <span>健康APP生态整合</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab5" class="tab-content hidden">
+                    <!-- 多设备生态系统 content -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <h3 class="text-xl font-semibold mb-4 text-primary">多设备互联的智能个人护理生态系统</h3>
+                            <p class="text-gray-700 mb-6">构建多个洗护设备互联互通的智能生态平台，通过AI技术实现设备间的数据共享和协同工作，提供全方位的个人护理解决方案。该平台将家庭中的多种洗护产品整合到统一的系统中，实现智能控制和综合分析。</p>
+                            
+                            <div class="bg-blue-50 p-6 rounded-xl mb-6">
+                                <h4 class="font-semibold mb-4 text-primary">生态系统结构</h4>
+                                <div class="relative h-64 md:h-80">
+                                    <!-- 生态系统示意图 -->
+                                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-primary rounded-full flex items-center justify-center text-white text-sm text-center p-2 shadow-lg">
+                                        AI洗护<br/>生态平台
+                                    </div>
+                                    
+                                    <!-- 连接的设备节点 -->
+                                    <div class="absolute top-[15%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center text-white text-xs p-1 shadow-md">
+                                        智能<br/>牙刷
+                                    </div>
+                                    
+                                    <div class="absolute top-[25%] left-[75%] transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center text-white text-xs p-1 shadow-md">
+                                        电动<br/>剃须刀
+                                    </div>
+                                    
+                                    <div class="absolute top-[85%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center text-white text-xs p-1 shadow-md">
+                                        智能<br/>洁面仪
+                                    </div>
+                                    
+                                    <div class="absolute top-[70%] left-[70%] transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center text-white text-xs p-1 shadow-md">
+                                        护发<br/>设备
+                                    </div>
+                                    
+                                    <!-- 连接线 -->
+                                    <div class="absolute top-1/2 left-1/2 w-[45%] h-[35%] border-2 border-blue-300 rounded-full opacity-30"></div>
+                                    <div class="absolute top-1/2 left-1/2 w-[75%] h-[65%] border-2 border-blue-200 rounded-full opacity-20"></div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">生态系统价值</h4>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>全面整合个人护理数据，提供综合分析和建议</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>设备间的智能协同，优化整体护理效果</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>统一的用户界面控制多设备，提升用户体验</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>自动化护理流程，根据用户习惯调整设备工作模式</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="ri-check-line text-primary mt-1"></i>
+                                    <span>为品牌创造交叉销售和持续收入机会</span>
+                                </li>
+                            </ul>
+                            
+                            <h4 class="font-semibold mb-3 text-gray-800">应用案例</h4>
+                            <div class="mb-6">
+                                <div class="p-5 bg-white rounded-lg border border-gray-100 shadow-sm">
+                                    <h5 class="font-medium text-primary mb-3">飞利浦Sonicare生态系统</h5>
+                                    <p class="text-gray-700 mb-3">飞利浦智能牙刷、水牙线和刷头消毒器的整合系统，共享数据分析口腔健康状况，协同工作提供全面口腔护理</p>
+                                    <div class="grid grid-cols-3 gap-3 mt-4">
+                                        <div class="text-center text-xs text-gray-600">
+                                            <div class="h-12 bg-blue-50 rounded flex items-center justify-center mb-1">
+                                                <i class="ri-brush-line text-primary"></i>
+                                            </div>
+                                            <span>智能牙刷</span>
+                                        </div>
+                                        <div class="text-center text-xs text-gray-600">
+                                            <div class="h-12 bg-blue-50 rounded flex items-center justify-center mb-1">
+                                                <i class="ri-drop-line text-primary"></i>
+                                            </div>
+                                            <span>水牙线</span>
+                                        </div>
+                                        <div class="text-center text-xs text-gray-600">
+                                            <div class="h-12 bg-blue-50 rounded flex items-center justify-center mb-1">
+                                                <i class="ri-device-line text-primary"></i>
+                                            </div>
+                                            <span>UV消毒器</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-5 rounded-lg">
+                                <h4 class="font-semibold mb-3 text-primary">跨设备协同效应</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-link-m text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium">智能互联</h5>
+                                            <p class="text-sm text-gray-600">设备自动识别并配对，形成无缝连接的护理网络</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-database-2-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium">数据整合</h5>
+                                            <p class="text-sm text-gray-600">各设备数据汇总分析，创造更全面的健康洞察</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-lightbulb-flash-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-medium">智能推荐</h5>
+                                            <p class="text-sm text-gray-600">基于全面数据提供更精准的个性化护理建议</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-5 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-primary">技术与市场评估</h4>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">技术难度</span>
+                                    <span class="text-sm text-gray-500">高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">市场潜力</span>
+                                    <span class="text-sm text-gray-500">很高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">实施周期</span>
+                                    <span class="text-sm text-gray-500">长期</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">OEM/ODM协同</span>
+                                    <span class="text-sm text-gray-500">高</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                                <h5 class="font-semibold mb-2 text-blue-800">技术标准与协议</h5>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>统一的设备连接标准</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>安全的数据传输协议</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>跨设备AI算法适配</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600"></i>
+                                        <span>第三方设备接入标准</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4 border border-blue-200 rounded-lg">
+                                <h5 class="font-medium mb-3 text-primary">商业模式潜力</h5>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">平台订阅模式</span>
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">硬件销售增长</span>
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-line text-blue-500"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">品牌授权收入</span>
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-line text-blue-500"></i>
+                                            <i class="ri-star-line text-blue-500"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">数据变现潜力</span>
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-fill text-blue-500"></i>
+                                            <i class="ri-star-half-line text-blue-500"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="section bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto mb-16 text-center">
+                <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-primary bg-blue-100 rounded-full">战略建议</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">AI驱动平台战略建议</h2>
+                <p class="text-gray-600 text-lg">基于市场分析和机会评估，提出最具可行性和回报潜力的AI平台发展战略</p>
+            </div>
+
+            <!-- Strategy Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">战略核心方向</h3>
+                    <div class="bg-blue-50 p-6 rounded-xl mb-8">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary">
+                                <i class="ri-focus-3-line text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold">分阶段发展策略</h4>
+                        </div>
+                        <p class="text-gray-700 mb-6">建议采用分阶段、模块化战略，从单一明确的价值点切入，逐步扩展至全面AI洗护平台生态系统。初期聚焦产品和用户价值，中期推动行业协同，后期构建完整生态。</p>
+                        
+                        <div class="relative py-8">
+                            <!-- Timeline -->
+                            <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-200 rounded-full"></div>
+                            
+                            <!-- Phase 1 -->
+                            <div class="relative mb-12">
+                                <div class="absolute left-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                                </div>
+                                <div class="ml-16">
+                                    <h5 class="font-semibold text-lg mb-2">第一阶段：个性化推荐平台</h5>
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <p class="text-gray-700 mb-3">优先发展<strong>个性化护理方案推荐平台</strong>，市场潜力大且技术实施周期短。从单一产品类别（电动牙刷或剃须刀）切入，快速验证价值。</p>
+                                        <div class="flex items-center gap-2 text-sm text-primary">
+                                            <i class="ri-time-line"></i>
+                                            <span>6-12个月</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phase 2 -->
+                            <div class="relative mb-12">
+                                <div class="absolute left-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                                </div>
+                                <div class="ml-16">
+                                    <h5 class="font-semibold text-lg mb-2">第二阶段：数据分析与优化</h5>
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <p class="text-gray-700 mb-3">整合<strong>产品改进反馈系统</strong>和<strong>设备管理预测</strong>功能，扩展数据价值，为ODM/OEM提供产品优化依据，同时增强消费者体验。</p>
+                                        <div class="flex items-center gap-2 text-sm text-primary">
+                                            <i class="ri-time-line"></i>
+                                            <span>12-24个月</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Phase 3 -->
+                            <div class="relative">
+                                <div class="absolute left-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                                </div>
+                                <div class="ml-16">
+                                    <h5 class="font-semibold text-lg mb-2">第三阶段：健康生态系统</h5>
+                                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                                        <p class="text-gray-700 mb-3">开发<strong>健康监测顾问</strong>和<strong>多设备生态系统</strong>，整合全线洗护产品，打造完整的个人健康管理平台，实现最大化价值。</p>
+                                        <div class="flex items-center gap-2 text-sm text-primary">
+                                            <i class="ri-time-line"></i>
+                                            <span>24-36个月</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">商业模式建议</h3>
+                    <div class="bg-white border border-gray-100 rounded-xl shadow-sm p-6">
+                        <div class="space-y-6">
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold mb-3 flex items-center gap-2">
+                                    <i class="ri-vip-crown-line text-primary"></i>
+                                    <span>品牌授权模式</span>
+                                </h4>
+                                <p class="text-sm text-gray-700">向品牌方授权AI平台技术，收取技术许可费和使用费，品牌方将功能整合进自有APP</p>
+                            </div>
+                            
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold mb-3 flex items-center gap-2">
+                                    <i class="ri-customer-service-2-line text-primary"></i>
+                                    <span>OEM/ODM增值服务</span>
+                                </h4>
+                                <p class="text-sm text-gray-700">作为ODM增值服务提供给品牌方，提高ODM议价能力，创造产品差异化优势</p>
+                            </div>
+                            
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold mb-3 flex items-center gap-2">
+                                    <i class="ri-user-star-line text-primary"></i>
+                                    <span>消费者订阅服务</span>
+                                </h4>
+                                <p class="text-sm text-gray-700">基础功能免费，高级个性化功能采用订阅模式，增加产品生命周期价值</p>
+                            </div>
+                            
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold mb-3 flex items-center gap-2">
+                                    <i class="ri-database-2-line text-primary"></i>
+                                    <span>数据分析服务</span>
+                                </h4>
+                                <p class="text-sm text-gray-700">向品牌和ODM厂商提供汇总数据分析服务，优化产品设计和营销策略</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Success Factors -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-6">成功关键要素</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-team-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">战略合作伙伴</h4>
+                        <p class="text-gray-600">与领先OEM/ODM厂商、知名品牌和AI技术提供商建立紧密合作关系</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-code-s-slash-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">技术壁垒</h4>
+                        <p class="text-gray-600">在特定场景下的AI模型训练和优化，形成难以复制的技术优势</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-user-voice-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">用户采用</h4>
+                        <p class="text-gray-600">确保直观易用的用户体验，降低学习门槛，提高用户采用率</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-5 text-primary">
+                            <i class="ri-shield-check-line text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-2">数据安全与隐私</h4>
+                        <p class="text-gray-600">建立严格的数据保护机制，确保用户隐私和合规要求</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section id="implementation" class="section bg-gray-50">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto mb-16 text-center">
+                <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-primary bg-blue-100 rounded-full">实施路径</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">AI平台构建与推广实施路径</h2>
+                <p class="text-gray-600 text-lg">详细的技术开发、市场推广和合作构建计划，确保战略有效落地</p>
+            </div>
+
+            <!-- Implementation Roadmap -->
+            <div class="bg-white p-8 rounded-xl shadow-md mb-16">
+                <h3 class="text-2xl font-semibold mb-6 text-primary">实施路线图</h3>
+                
+                <!-- Phases Tabs -->
+                <div class="mb-8">
+                    <div class="flex flex-wrap border-b mb-6">
+                        <button class="phase-btn active px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="phase1">
+                            准备阶段
+                        </button>
+                        <button class="phase-btn px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="phase2">
+                            开发阶段
+                        </button>
+                        <button class="phase-btn px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="phase3">
+                            测试阶段
+                        </button>
+                        <button class="phase-btn px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="phase4">
+                            推广阶段
+                        </button>
+                        <button class="phase-btn px-4 py-2 mx-1 border-b-2 border-transparent hover:text-primary transition-colors" data-target="phase5">
+                            扩展阶段
+                        </button>
+                    </div>
+                    
+                    <!-- Phase Content -->
+                    <div id="phase1" class="phase-content active">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <h4 class="text-xl font-semibold mb-4">准备阶段 (1-3个月)</h4>
+                                <p class="text-gray-700 mb-6">制定详细计划，确定合作伙伴和资源需求，为AI平台构建奠定基础。</p>
+                                
+                                <h5 class="font-semibold mb-3 text-gray-800">关键任务</h5>
+                                <ul class="space-y-4 mb-6">
+                                    <li class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-team-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-medium">组建核心团队</h6>
+                                            <p class="text-sm text-gray-600">组建包含产品、技术、数据科学和市场专家的核心团队</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-file-list-3-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-medium">制定需求规格</h6>
+                                            <p class="text-sm text-gray-600">详细定义产品功能、技术架构和用户体验需求</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-user-search-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-medium">用户研究</h6>
+                                            <p class="text-sm text-gray-600">进行用户访谈和调研，验证产品概念，收集需求和反馈</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="bg-blue-100 p-2 rounded-full text-primary flex-shrink-0 mt-1">
+                                            <i class="ri-shake-hands-line text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-medium">建立合作伙伴关系</h6>
+                                            <p class="text-sm text-gray-600">与重点OEM/ODM厂商和品牌建立初步合作关系</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-5 rounded-lg">
+                                <h5 class="font-semibold mb-4 text-primary">成果与指标</h5>
+                                <ul class="space-y-3 text-sm text-gray-700">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600 mt-0.5"></i>
+                                        <span>完整的产品规格文档</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600 mt-0.5"></i>
+                                        <span>用户需求和痛点分析报告</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600 mt-0.5"></i>
+                                        <span>至少3家OEM/ODM意向合作</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600 mt-0.5"></i>
+                                        <span>详细的项目计划时间表</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ri-checkbox-circle-line text-blue-600 mt-0.5"></i>
+                                        <span>资源需求评估</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 pt-6 border-t border-blue-100">
+                                    <h5 class="font-semibold mb-3 text-primary">风险与挑战</h5>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-error-warning-line text-amber-500 mt-0.5"></i>
+                                            <span>合作伙伴意愿不足</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-error-warning-line text-amber-500 mt-0.5"></i>
+                                            <span>资源估计不足</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <i class="ri-error-warning-line text-amber-500 mt-0.5"></i>
+                                            <span>需求范围过大</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="phase2" class="phase-content hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <h4 class="text-xl font-semibold mb-4">开发阶段 (3-6个月)</h4>
+                                <p class="text-gray-700 mb-6">核心平台功能和AI模型的开发与整合，包括APP界面、后端架构和数据处理系统。</p>
+                                
+                                <h5 class="font-semibold mb-3 text-gray-800">关键任务</h5>
+                                <div class="space-y-4 mb-6">
+                                    <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                                        <h6 class="font-medium text-primary">AI模型开发</h6>
+                                        <p class="text-sm text-gray-600">开发和训练个性化推荐算法，图像识别模型和数据分析模型</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                                        <h6 class="font-medium text-primary">应用程序开发</h6>
+                                        <p class="text-sm text-gray-600">构建用户界面、数据收集模块和推荐引擎，确保流畅的用户体验</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                                        <h6 class="font-medium text-primary">硬件接口开发</h6>
+                                        <p class="text-sm text-gray-600">开发与洗护设备的连接接口和数据交换协议</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                                        <h6 class="font-medium text-primary">数据安全机制</h6>
+                                        <p class="text-sm text-gray-600">实施数据加密、隐私保护和合规机制</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-5 rounded-lg">
+                                <h5 class="font-semibold mb-4 text-primary">技术架构</h5>
+                                
+                                <div class="bg-white p-3 rounded-lg mb-4">
+                                    <h6 class="font-medium mb-2 text-sm">前端开发</h6>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">React Native</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">Flutter</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">UX/UI设计</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-3 rounded-lg mb-4">
+                                    <h6 class="font-medium mb-2 text-sm">后端开发</h6>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">Python</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">Node.js</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">RESTful API</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-3 rounded-lg mb-4">
+                                    <h6 class="font-medium mb-2 text-sm">AI开发</h6>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">TensorFlow</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">PyTorch</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">机器学习算法</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-3 rounded-lg">
+                                    <h6 class="font-medium mb-2 text-sm">数据存储</h6>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">MongoDB</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">PostgreSQL</span>
+                                        <span class="px-2 py-1 bg-blue-100 text-primary text-xs rounded-full">云存储</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="phase3" class="phase-content hidden">
+                        <h4 class="text-xl font-semibold mb-4">测试阶段内容</h4>
+                        <p>此阶段内容待完善...</p>
+                    </div>
+                    
+                    <div id="phase4" class="phase-content hidden">
+                        <h4 class="text-xl font-semibold mb-4">推广阶段内容</h4>
+                        <p>此阶段内容待完善...</p>
+                    </div>
+                    
+                    <div id="phase5" class="phase-content hidden">
+                        <h4 class="text-xl font-semibold mb-4">扩展阶段内容</h4>
+                        <p>此阶段内容待完善...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resource Requirements -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center gap-2">
+                        <i class="ri-user-settings-line"></i>
+                        <span>团队需求</span>
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors">
+                            <div class="text-primary bg-blue-100 p-2 rounded-full">
+                                <i class="ri-code-s-slash-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">软件开发团队</h4>
+                                <p class="text-sm text-gray-600">前端、后端、移动端开发，4-6人</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors">
+                            <div class="text-primary bg-blue-100 p-2 rounded-full">
+                                <i class="ri-ai-generate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">AI/ML工程师</h4>
+                                <p class="text-sm text-gray-600">机器学习、计算机视觉专家，2-3人</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors">
+                            <div class="text-primary bg-blue-100 p-2 rounded-full">
+                                <i class="ri-layout-4-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">产品与设计</h4>
+                                <p class="text-sm text-gray-600">产品经理、UX/UI设计师，2-3人</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors">
+                            <div class="text-primary bg-blue-100 p-2 rounded-full">
+                                <i class="ri-customer-service-2-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">业务发展</h4>
+                                <p class="text-sm text-gray-600">合作关系管理、市场推广，2-3人</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center gap-2">
+                        <i class="ri-coins-line"></i>
+                        <span>投资与回报</span>
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-3">投资需求</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-1">研发投入</p>
+                                    <p class="font-semibold text-primary">150-200万</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-1">营销推广</p>
+                                    <p class="font-semibold text-primary">80-100万</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-1">运营成本</p>
+                                    <p class="font-semibold text-primary">60-80万/年</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-1">总初始投入</p>
+                                    <p class="font-semibold text-primary">300-380万</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium mb-3">预期回报</h4>
+                        <div class="relative">
+                            <div class="h-72">
+                                <!-- SVG Chart -->
+                                <svg class="w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Grid lines -->
+                                    <line x1="40" y1="20" x2="40" y2="180" stroke="#e5e7eb" />
+                                    <line x1="40" y1="180" x2="380" y2="180" stroke="#e5e7eb" />
+                                    
+                                    <!-- Y axis text -->
+                                    <text x="10" y="30" font-size="10" text-anchor="start" fill="#6b7280">600万</text>
+                                    <text x="10" y="80" font-size="10" text-anchor="start" fill="#6b7280">400万</text>
+                                    <text x="10" y="130" font-size="10" text-anchor="start" fill="#6b7280">200万</text>
+                                    <text x="10" y="180" font-size="10" text-anchor="start" fill="#6b7280">0</text>
+                                    
+                                    <!-- X axis text -->
+                                    <text x="40" y="195" font-size="10" text-anchor="middle" fill="#6b7280">第1年</text>
+                                    <text x="160" y="195" font-size="10" text-anchor="middle" fill="#6b7280">第2年</text>
+                                    <text x="280" y="195" font-size="10" text-anchor="middle" fill="#6b7280">第3年</text>
+                                    <text x="380" y="195" font-size="10" text-anchor="middle" fill="#6b7280">第4年</text>
+                                    
+                                    <!-- Investment line -->
+                                    <path d="M40,100 L160,150 L280,170 L380,180" stroke="#ef4444" stroke-width="2" fill="none"/>
+                                    <circle cx="40" cy="100" r="3" fill="#ef4444"/>
+                                    <circle cx="160" cy="150" r="3" fill="#ef4444"/>
+                                    <circle cx="280" cy="170" r="3" fill="#ef4444"/>
+                                    <circle cx="380" cy="180" r="3" fill="#ef4444"/>
+                                    
+                                    <!-- Revenue line -->
+                                    <path d="M40,170 L160,120 L280,60 L380,30" stroke="#3b82f6" stroke-width="2" fill="none"/>
+                                    <circle cx="40" cy="170" r="3" fill="#3b82f6"/>
+                                    <circle cx="160" cy="120" r="3" fill="#3b82f6"/>
+                                    <circle cx="280" cy="60" r="3" fill="#3b82f6"/>
+                                    <circle cx="380" cy="30" r="3" fill="#3b82f6"/>
+                                    
+                                    <!-- Break-even point -->
+                                    <circle cx="220" cy="110" r="5" fill="#10b981" stroke="#fff" stroke-width="1"/>
+                                    <text x="220" y="100" font-size="10" text-anchor="middle" fill="#10b981">收支平衡点</text>
+                                </svg>
+                            </div>
+                            <div class="flex justify-center gap-6 mt-2">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                    <span class="text-xs text-gray-600">收入</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                    <span class="text-xs text-gray-600">投入</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                    <span class="text-xs text-gray-600">盈亏平衡</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white py-12">
+        <div class="footer-pattern"></div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Logo and Description -->
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-bold text-xl">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold">AI洗护平台</h3>
+                    </div>
+                    <p class="text-blue-100 text-sm mb-4">打造AI驱动的个人洗护产品增值平台，提升产品体验与OEM/ODM产业价值。</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div style="float: right;">
+                    <h4 class="text-lg font-semibold mb-4" >快速导航</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#market" class="text-blue-100 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="ri-arrow-right-s-line"></i>
+                                <span>市场分析</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#opportunities" class="text-blue-100 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="ri-arrow-right-s-line"></i>
+                                <span>机会方向</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#strategy" class="text-blue-100 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="ri-arrow-right-s-line"></i>
+                                <span>战略建议</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#implementation" class="text-blue-100 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="ri-arrow-right-s-line"></i>
+                                <span>实施路径</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+               
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-600 mt-10 pt-6 text-center text-blue-200 text-sm">
+                <p>AI驱动个人洗护产品OEM/ODM增值平台战略 | 本报告仅供参考，实际实施需根据具体情况调整</p>
+            </div>
+            
+            <!-- Back to Top Button -->
+            <div class="flex justify-center mt-6">
+                <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all hover:-translate-y-1">
+                    <i class="ri-arrow-up-line text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+        const executiveSummaryBtn = document.getElementById('showExecutiveSummary');
+        const executiveSummaryModal = document.getElementById('executiveSummaryModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const phaseButtons = document.querySelectorAll('.phase-btn');
+        const phaseContents = document.querySelectorAll('.phase-content');
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 10) {
+                navbar.classList.add('navbar-scrolled');
+                navbar.classList.remove('navbar-transparent');
+                
+                // Change text color on scroll
+                document.querySelectorAll('#navbar a').forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
+                
+                mobileMenuBtn.classList.remove('text-white');
+                mobileMenuBtn.classList.add('text-gray-800');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.add('navbar-transparent');
+                
+                // Restore text color
+                document.querySelectorAll('#navbar a').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+                
+                mobileMenuBtn.classList.add('text-white');
+                mobileMenuBtn.classList.remove('text-gray-800');
+            }
+        });
+        
+        // Mobile Menu
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+        
+        closeMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+        
+        // Close mobile menu when clicking a link
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        });
+        
+        // Executive Summary Modal
+        executiveSummaryBtn.addEventListener('click', function() {
+            executiveSummaryModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+        
+        closeModalBtn.addEventListener('click', function() {
+            executiveSummaryModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+        
+        // Close modal when clicking outside
+        executiveSummaryModal.addEventListener('click', function(e) {
+            if (e.target === executiveSummaryModal) {
+                executiveSummaryModal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+        
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !executiveSummaryModal.classList.contains('hidden')) {
+                executiveSummaryModal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+        
+        // Tabs
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active', 'border-primary', 'text-primary'));
+                tabContents.forEach(content => content.classList.add('hidden'));
+                
+                // Add active class to clicked button and show content
+                this.classList.add('active', 'border-primary', 'text-primary');
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+        
+        // Implementation Phase Tabs
+        if (phaseButtons.length > 0) {
+            phaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    
+                    // Remove active class from all buttons and contents
+                    phaseButtons.forEach(btn => btn.classList.remove('active', 'border-primary', 'text-primary'));
+                    phaseContents.forEach(content => content.classList.add('hidden'));
+                    
+                    // Add active class to clicked button and show content
+                    this.classList.add('active', 'border-primary', 'text-primary');
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+        }
+        
+        // Initialize tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set first tab as active
+            tabButtons[0].classList.add('active', 'border-primary', 'text-primary');
+            
+            // Set first phase tab as active if exists
+            if (phaseButtons.length > 0) {
+                phaseButtons[0].classList.add('active', 'border-primary', 'text-primary');
+            }
+            
+            // Animate elements when they come into view
+            const animatedElements = document.querySelectorAll('.stat-card, .advantage-card, .model-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeIn');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Banner animation
+        function initCanvasAnimation() {
+            const canvas = document.getElementById('animationCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size to match parent
+            function resizeCanvas() {
+                const parent = canvas.parentElement;
+                const oldWidth = canvas.width;
+                const oldHeight = canvas.height;
+                
+                canvas.width = parent.offsetWidth;
+                canvas.height = parent.offsetHeight;
+                
+                // Update node positions to maintain their relative positions
+                if (nodes.length > 0) {
+                    const widthRatio = canvas.width / oldWidth;
+                    const heightRatio = canvas.height / oldHeight;
+                    
+                    nodes.forEach(node => {
+                        node.x = node.x * widthRatio;
+                        node.y = node.y * heightRatio;
+                    });
+                }
+            }
+            
+            // Debounce function to limit resize events
+            function debounce(func, wait) {
+                let timeout;
+                return function() {
+                    const context = this;
+                    const args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(context, args), wait);
+                };
+            }
+            
+            // Apply debounced resize handler
+            const debouncedResize = debounce(resizeCanvas, 250);
+            window.addEventListener('resize', debouncedResize);
+            
+            // Animation parameters
+            const nodes = [];
+            const numNodes = 60; // Reduced for better performance
+            const nodeRadius = 1.5;
+            const nodeColor = 'rgba(255, 255, 255, 0.5)';
+            const lineColor = 'rgba(255, 255, 255, 0.1)';
+            const maxDist = 150; // Maximum distance for lines
+            const maxSpeed = 0.2; // Maximum speed of node movement
+            
+            // Mouse interaction
+            let mouse = {
+                x: null,
+                y: null,
+                radius: 120
+            };
+            
+            canvas.addEventListener('mousemove', function(e) {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+            
+            canvas.addEventListener('mouseleave', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
+            
+            // Initialize canvas first
+            resizeCanvas();
+            
+            // Create nodes after canvas is properly sized
+            for (let i = 0; i < numNodes; i++) {
+                const size = Math.random() * 2 + 0.5; // Random size between 0.5 and 2.5
+                nodes.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * maxSpeed,
+                    vy: (Math.random() - 0.5) * maxSpeed,
+                    radius: size,
+                    opacity: Math.random() * 0.5 + 0.3 // Random opacity
+                });
+            }
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Update and draw nodes
+                nodes.forEach(node => {
+                    // Move node
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x < 0 || node.x > canvas.width) node.vx = -node.vx;
+                    if (node.y < 0 || node.y > canvas.height) node.vy = -node.vy;
+                    
+                    // Mouse interaction
+                    if (mouse.x && mouse.y) {
+                        const dx = mouse.x - node.x;
+                        const dy = mouse.y - node.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < mouse.radius) {
+                            // Push nodes away from mouse
+                            const angle = Math.atan2(dy, dx);
+                            const pushFactor = (mouse.radius - dist) / mouse.radius;
+                            
+                            node.x -= Math.cos(angle) * pushFactor * 2;
+                            node.y -= Math.sin(angle) * pushFactor * 2;
+                        }
+                    }
+                    
+                    // Draw node
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity})`;
+                    ctx.fill();
+                });
+                
+                // Draw connections
+                for (let i = 0; i < numNodes; i++) {
+                    for (let j = i + 1; j < numNodes; j++) {
+                        const dx = nodes[i].x - nodes[j].x;
+                        const dy = nodes[i].y - nodes[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < maxDist) {
+                            // Fade lines based on distance
+                            const opacity = (1 - (dist / maxDist)) * 0.15;
+                            
+                            ctx.beginPath();
+                            ctx.moveTo(nodes[i].x, nodes[i].y);
+                            ctx.lineTo(nodes[j].x, nodes[j].y);
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+            
+            // Start animation
+            animate();
+            
+            // Return cleanup function if needed
+            return function cleanup() {
+                window.removeEventListener('resize', debouncedResize);
+            };
+        }
+        
+        // Initialize the canvas animation when the DOM is loaded
+        let canvasAnimationCleanup;
+        document.addEventListener('DOMContentLoaded', function() {
+            canvasAnimationCleanup = initCanvasAnimation();
+        });
+        
+        // Clean up on page unload
+        window.addEventListener('beforeunload', function() {
+            if (canvasAnimationCleanup) canvasAnimationCleanup();
+        });
+    </script>
+</body>
+</html> 
